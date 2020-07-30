@@ -637,7 +637,7 @@ INCLUDE_DIRECTORIES(${INCLUDE_DIRS})
 # Add binary that is built from the source file "main.cpp".
 # The extension is automatically found.
 ADD_LIBRARY(rtabmap_core ${SRC_FILES} ${RESOURCES_HEADERS})
-TARGET_LINK_LIBRARIES(rtabmap_core rtabmap_utilite ${LIBRARIES})
+TARGET_LINK_LIBRARIES(rtabmap_core rtabmap_utilite ${LIBRARIES} $ENV{HOME}/catkin_ws/devel/lib/libvins_lib.so $ENV{HOME}/catkin_ws/devel/lib/libcamera_models.so)
 
 SET_TARGET_PROPERTIES(
      rtabmap_core
